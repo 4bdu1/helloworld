@@ -9,8 +9,10 @@ hooks:
   BeforeInstall:
     - location: scripts/stop.sh
       timeout: 30
+      runas: root
   ApplicationStart:
     - location: scripts/start.sh
       timeout: 30
+      runas: root
   ValidateService:
     - location: scripts/validate.sh
